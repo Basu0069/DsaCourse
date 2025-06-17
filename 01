@@ -1,6 +1,168 @@
-hi
+Finite Automata 
+
+-Representation of computation 
+-Fiite Steps to solve a problem--- input ,output,testcases. 
 
 
 
 
-yoo
+*DFA -> Determistic finite automata-- that it follows certain things 
+1) Steps are finite 
+2)Every state has transation with every input symbol 
+3)Single input-> Single output 
+
+
+
+eg we will take of ATM Machine 
+
+single input giving multiple oujtput 
+
+Insert a Card -> money , message , transit 
+
+ATM machine is a NFA (Non-deterministic finite automata)
+
+
+
+DFA MEANS IF U PUT SINGLE INPUT -> SIngle output comes 
+NFA MEANS IF U PUT SINGLE INPUT -> Multiple outputs come 
+
+eg2) Vending Machine-> code - bottle 
+
+
+
+
+
+
+
+
+
+
+
+*DFA
+
+TUPLES
+1)Q-> Set os states{qo, q1, q2 , ---}
+2)Σ->Input symbol set {a,b,c ---}
+3)δ->Transition function qo -> input 
+4)qo -> intial state 
+5)Final state(o/p is achiever);
+
+
+Example 
+
+i/p symbol-> a     (only a's);
+Create DFA that consist of all set of strings problem  that containing atleast 2a's 
+
+o/p= {aa, aaa,aaaa,-----}  it means my outptu are infinte okay 
+these "aa" will be my test cases okay 
+
+
+
+
+
+NOW another eg- 
+i/p -> a 
+o/p-? {aa,aaa,aaaa,-----}
+atlast 2a's {DFA};
+
+Trick how to solve --->
+1)create Generized DFa 
+2)State single transition with i/ps 
+3) right answers(Test vases are accepted)
+Wrong answers must be(rejected);
+
+
+
+
+{aa,aaa,aaaa,aaaaa,------};
+
+ans- generalized dfa as q0 
+
+q0  a  q1 a  q2 
+Every State has Single Transition with I/p 
+
+encounted with q1 we get a and with q2 we get 2a okay 
+
+Does q2 have trnasion with a? NO 
+
+
+LOOP-> any no fo anything 
+
+SO aqns will be {aa, }
+if we get a with q2 we get 
+if we gtet 2's from right side okay 
+
+{aa,aaa,aaaa}
+
+
+
+
+
+
+
+
+here see 
+{aa,aaa,aaaa,aaaaa,----};
+
+q0 -> a -> q1 ->a -> q2
+
+q2 can take 0 a's or 1a's or 2a's or 3a's 
+it is a looping process basically okay 
+
+
+
+
+
+QUESTION2) Exactly 2 a's 
+
+O/P ->{aa};
+
+->q0   a    q1   a    q2    a  dead  a 
+
+
+but here 12 doesnt have any transtion 
+
+so here we would put a and then put a dead state here and put a on it 
+it is non computable 
+q2 also have a transtion with a but it is dead stae oaky 
+we put the loop ond dead state okay 
+
+we didint put a on q2 because it would result in aaa and we have to work on exactly 2 a's okay 
+
+4 transtions are happening here 
+
+
+
+
+QUESTion) ATmost 2a's 
+
+{ blank, a,aa};
+
+here we are having 3 answers 
+q0  a  q1  a  q2   a dead   a 
+
+here we get the blank final state in q0 and a in q1 alSO FINAL STATE  and aa in q2 also final state 
+we hAVE     3 states here and all states are fibnal states okay 
+
+
+
+
+
+
+
+
+
+Question: Even numbers of a's   {a}; this is finite cant use 2 a in one transtion 
+
+0 a's ,aa,aaaa,aaaaaaaaa,
+
+
+q0  a  q1   a q2  a q1  a q2 a q1    5 a's  this is answer too okay 
+
+q0 a q1 a   this is answer too 
+
+
+
+
+
+
