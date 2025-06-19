@@ -1,0 +1,34 @@
+call by value = values 
+
+call by address/ pointer  = pointer valyr 
+
+call by reference = referecne variable 
+
+
+
+Q which of these function is better in terms of complexity 
+a) void swap(int x , int y){
+    int temp;
+    temp = x;
+    x=y;
+     y=temp;
+
+}
+this space = 6 bytes 
+here only 4 operations ae follwee here 
+
+
+
+
+b) void swap(int x, int y){
+    x= x+y;  // 2 operations here 
+    y= x-y; // 2 operations here too 
+    x= x-y;  // 2 operations here too 
+}
+this spcae = 4 bytes 
+and here  6 operations are folow 
+
+ANS- a 
+
+give preference to time complexity over space okay 
+
